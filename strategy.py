@@ -122,7 +122,7 @@ class Strategy:
                 if depth['side'] == 'Sell':
                     best_ask_XBTM20_price = min(depth['price'], best_ask_XBTM20_price)
 
-            # Если открытая позиция на XBTM20 >= Максимальный размер накопленной позиции,
+            # Если открытая позиция на XBTM20 >= Максимальный размер накопленной позиции,
             # перестать квотировать Limit Buy order. В противном случае квотировать Buy
             # сторону по условиям 100% времени.
             if self.orders_XBTM20 * self.inventory <= best_ask_XBTM20_price :
@@ -132,7 +132,7 @@ class Strategy:
                 # quoting the Limit Buy order
                 self.isBuyXBTM20 = True
 
-            # Если открытая позиция на XBTM20 <= -Максимальный размер накопленной позиции,
+            # Если открытая позиция на XBTM20 <= -Максимальный размер накопленной позиции,
             # перестать квотировать Limit Sell order. В противном случае квотировать Sell
             # сторону по условиям 100% времени.
             if -self.orders_XBTM20 * self.inventory >= best_bid_XBTM20_price:
@@ -184,19 +184,3 @@ class Strategy:
 
 strategy = Strategy(api_key='YQoQFiu2QHAQDIj1ez1hNfVC', api_secret='WkxmhD9V2aIluExCEEIGlzgDiWRpVtFR17TwTOVTY42cu-L1')
 strategy.algo_run()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

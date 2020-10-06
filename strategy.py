@@ -182,5 +182,5 @@ class Strategy:
             sleep(10)
 
 
-strategy = Strategy(api_key='YQoQFiu2QHAQDIj1ez1hNfVC', api_secret='WkxmhD9V2aIluExCEEIGlzgDiWRpVtFR17TwTOVTY42cu-L1')
+strategy = Strategy(api_key='', api_secret='')
 strategy.algo_run()
